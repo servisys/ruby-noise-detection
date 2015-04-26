@@ -1,0 +1,3 @@
+ls mp3/ |sort -R |tail -1 |while read file; do
+	/usr/bin/mpg321 --loop 1  mp3/$file
+done
