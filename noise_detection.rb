@@ -166,7 +166,9 @@ pid = fork do
     logger.debug("Detected amplitude: #{amplitude}") if options[:verbose]
     if amplitude > THRESHOLD
       logger.info("Sound detected!!!")
-  
+	
+	# Play sound
+	current_directory_contents = `/root/playsound`
   	# Read a file
 	filecontent = File.open(RECORD_FILENAME ,"rb") {|io| io.read}
  	
